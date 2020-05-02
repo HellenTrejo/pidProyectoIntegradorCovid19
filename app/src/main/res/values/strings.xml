@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ProyectoCovid</string>
+
+    <string-array name="opciones_persona">
+        <item>O.o</item>
+        <item>Cifras en Perú</item>
+        <item>Mi perfil</item>
+    </string-array>
+
+    <string-array name="opciones_admin">
+        <item>O.o</item>
+        <item>Cifras en Perú</item>
+        <item>Mi perfil</item>
+        <item>Verificar síntomas</item>
+        <item>Actualizar cifras</item>
+        <item>Seguimiento</item>
+    </string-array>
+</resources>
