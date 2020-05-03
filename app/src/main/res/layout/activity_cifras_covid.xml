@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CifrasCovid">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <TextView
+        android:id="@+id/textUpdate"
+        android:layout_width="200dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="56dp"
+        android:text="Actualizadas al:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Spinner
+        android:id="@+id/spinnerFecha"
+        android:layout_width="168dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUpdate" />
+
+    <Spinner
+        android:id="@+id/spinnerDepart"
+        android:layout_width="168dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFecha" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/casosNuevo"
+        android:layout_width="124dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDepart">
+
+        <TextView
+            android:id="@+id/Casonuevo"
+            android:layout_width="72dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:text="Casos Nuevos"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <EditText
+            android:id="@+id/contadornuevo"
+            android:layout_width="103dp"
+            android:layout_height="33dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="###"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/Casonuevo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.592" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/casosRecuperados"
+        android:layout_width="124dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/casosNuevo">
+
+        <TextView
+            android:id="@+id/casorecuperado"
+            android:layout_width="88dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:text="Casos Recuperados"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <EditText
+            android:id="@+id/contadorRecuperado"
+            android:layout_width="103dp"
+            android:layout_height="33dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="###"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/casorecuperado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.592" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/casosFallecidos"
+        android:layout_width="124dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toEndOf="@+id/casosRecuperados"
+        app:layout_constraintTop_toBottomOf="@+id/casosTotales">
+
+        <TextView
+            android:id="@+id/casoFallecido"
+            android:layout_width="72dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:text="Casos Fallecidos"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <EditText
+            android:id="@+id/contadorFallecidos"
+            android:layout_width="103dp"
+            android:layout_height="33dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="###"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/casoFallecido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.592" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/casosTotales"
+        android:layout_width="124dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/casosNuevo"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDepart">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="72dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:text="Casos Totales"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <EditText
+            android:id="@+id/contadorTotales"
+            android:layout_width="103dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="###"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.842" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

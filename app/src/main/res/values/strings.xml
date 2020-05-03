@@ -15,4 +15,5 @@
         <item>Actualizar cifras</item>
         <item>Seguimiento</item>
     </string-array>
+    <string name="title_activity_cifras_covid">CifrasCovid</string>
 </resources>
