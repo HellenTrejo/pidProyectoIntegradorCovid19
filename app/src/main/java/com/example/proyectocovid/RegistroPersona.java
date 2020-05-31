@@ -2,7 +2,10 @@ package com.example.proyectocovid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,14 +13,18 @@ import android.widget.Spinner;
 
 import com.example.proyectocovid.controlador.MySqlNacionalidadDAO;
 import com.example.proyectocovid.controlador.MySqlTipoDocumentoDAO;
+import com.example.proyectocovid.entidades.Estado;
 import com.example.proyectocovid.entidades.Nacionalidad;
+import com.example.proyectocovid.entidades.Persona;
+import com.example.proyectocovid.entidades.Rol;
 import com.example.proyectocovid.entidades.TipoDocumento;
 import com.example.proyectocovid.taskNacionalidad.ServicioTaskListNacionalidad;
+import com.example.proyectocovid.taskPersona.ServicioTaskSavePersona;
 import com.example.proyectocovid.taskTipoDoc.ServicioTaskListTipoDoc;
 
 import java.util.ArrayList;
 
-public class RegistroPersona extends AppCompatActivity {
+public class RegistroPersona extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
     EditText edtNumCel, edtNumDoc;
     Spinner spNacion, spTipoDoc;
     Button btnRegistrop;
@@ -32,7 +39,7 @@ public class RegistroPersona extends AppCompatActivity {
         spNacion =(Spinner) findViewById(R.id.spNacionalidad);
         spTipoDoc=(Spinner) findViewById(R.id.spTipoDocumento);
         btnRegistrop=(Button) findViewById(R.id.btnRegPersona);
-      //  btnRegistrop.setOnClickListener(this);
+        btnRegistrop.setOnClickListener(this);
 
         cargarNacionalidad();
         cargarTipoDoc();
@@ -67,7 +74,49 @@ public class RegistroPersona extends AppCompatActivity {
     }
 
 
+    public void registrarPersona(){
+        try{
+            int codi;
+            Persona per=new Persona();
+            Nacionalidad nac= new Nacionalidad();
+            TipoDocumento doc= new TipoDocumento();
 
+            per.setNumDoc(edtNumDoc.getText().toString());
+            per.setNumCel(edtNumCel.getText().toString());
+            doc= (TipoDocumento) spTipoDoc.getItemAtPosition(spTipoDoc.getSelectedItemPosition());
+            per.setCodigoDoc(doc.getIdtipo_documento());
+            nac= (Nacionalidad) spNacion.getItemAtPosition(spNacion.getSelectedItemPosition());
+            per.setCodigoNac(nac.getIdnacionalidad());
+            per.setCodigoRol(2);
+            per.setCodigoEst(4);
+            ServicioTaskSavePersona servicio= new ServicioTaskSavePersona(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/persona/add/",per);
+            servicio.execute();
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        if(v==btnRegistrop){
+            registrarPersona();
+            Intent intent = new Intent(this, ActivityPerfil.class);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
 
 
