@@ -4,6 +4,11 @@ public class TipoDocumento {
     private int idtipo_documento;
     private String descripcion;
 
+    @Override
+    public String toString(){
+        return descripcion;
+    }
+
     public int getIdtipo_documento() {
         return idtipo_documento;
     }
