@@ -4,6 +4,11 @@ public class Nacionalidad {
     private int idnacionalidad;
     private String nombreNacionalidad;
 
+    @Override
+    public String toString(){
+        return nombreNacionalidad;
+    }
+
     public int getIdnacionalidad() {
         return idnacionalidad;
     }

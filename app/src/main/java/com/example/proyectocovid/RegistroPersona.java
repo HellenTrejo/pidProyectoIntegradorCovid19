@@ -59,7 +59,7 @@ public class RegistroPersona extends AppCompatActivity {
             String c=servicio.get();
             ArrayList<TipoDocumento> data= MySqlTipoDocumentoDAO.listaAllTipoDoc(c);
             ArrayAdapter<TipoDocumento> adapter=new ArrayAdapter<TipoDocumento>(this,android.R.layout.simple_list_item_1,data);
-            spNacion.setAdapter(adapter);
+            spTipoDoc.setAdapter(adapter);
         }
         catch (Exception e){
             e.printStackTrace();
