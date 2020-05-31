@@ -59,14 +59,16 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/input"
+                android:background="@drawable/btn_redondeo_white"
                 android:hint="Nacionalidad"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
                 android:textColor="#fff"
-                android:textColorHint="#ccc" />
+                android:textColorHint="#fff"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                />
 
 
 
@@ -77,7 +79,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/input"
+                android:background="@drawable/btn_redondeo_white"
                 android:hint="Tipo de documento"
                 android:inputType="textEmailAddress"
                 android:paddingLeft="20dp"
@@ -85,7 +87,8 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
                 android:textColor="#fff"
-                android:textColorHint="#ccc"
+                android:textColorHint="#fff"
+                style="@android:style/Widget.Holo.Light.Spinner"
                 />
 
             <EditText
