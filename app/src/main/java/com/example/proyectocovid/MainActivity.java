@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity
         btnIngresar = (Button) findViewById(R.id.btnlogin);
         btnARegistroP=(Button)findViewById((R.id.btnRegistrarNewP));
         btnIngresar.setOnClickListener(this);
+        btnARegistroP.setOnClickListener(this);
+
     }
 
 
