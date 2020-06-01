@@ -89,7 +89,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
             per.setCodigoNac(nac.getIdnacionalidad());
             per.setCodigoRol(2);
             per.setCodigoEst(4);
-            ServicioTaskSavePersona servicio= new ServicioTaskSavePersona(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/persona/",per);
+            ServicioTaskSavePersona servicio= new ServicioTaskSavePersona(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/persona/add/",per);
             servicio.execute();
 
         }

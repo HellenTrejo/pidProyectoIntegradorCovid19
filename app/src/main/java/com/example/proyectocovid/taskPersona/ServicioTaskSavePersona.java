@@ -33,10 +33,10 @@ public class ServicioTaskSavePersona extends AsyncTask<Void,Void,Void> {
             parametrosPost.put("idPersona",persona.getIdpersona());
             parametrosPost.put("numDoc",persona.getNumDoc());
             parametrosPost.put("numcel",persona.getNumCel());
-            parametrosPost.put("idTipoDocumento",persona.getCodigoDoc());
-            parametrosPost.put("idNacionalidad",persona.getCodigoNac());
-            parametrosPost.put("idRol",persona.getCodigoRol());
-            parametrosPost.put("idEstado",persona.getCodigoEst());
+            parametrosPost.put("idtipoDocumento",persona.getCodigoDoc());
+            parametrosPost.put("idnacionalidad",persona.getCodigoNac());
+            parametrosPost.put("idrol",persona.getCodigoRol());
+            parametrosPost.put("idestado",persona.getCodigoEst());
             //DEFINIR PARAMETROS DE CONEXION
             urlConnection.setReadTimeout(15000 /* milliseconds */);
             urlConnection.setConnectTimeout(15000 /* milliseconds */);
@@ -50,7 +50,7 @@ public class ServicioTaskSavePersona extends AsyncTask<Void,Void,Void> {
             urlConnection.connect();
             int responseCode = urlConnection.getResponseCode();
             if(responseCode == HttpURLConnection.HTTP_OK){
-                // server_response = readStream(urlConnection.getInputStream());
+                 //server_response = readStream(urlConnection.getInputStream());
             }
 
         }
