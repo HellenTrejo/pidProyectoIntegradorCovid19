@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ProyectoCovid</string>
 
+    <string name="btnIngresar">Ingresar</string>
     <string-array name="opciones_persona">
         <item>O.o</item>
         <item>Cifras en Perú</item>
