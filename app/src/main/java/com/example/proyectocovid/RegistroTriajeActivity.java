@@ -38,7 +38,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
 
 
         rb1Si=(RadioButton) findViewById(R.id.rbPre1Si);
-        /*rb1No=(RadioButton) findViewById(R.id.rbPre1No);
+        rb1No=(RadioButton) findViewById(R.id.rbPre1No);
         rb1Otro=(RadioButton) findViewById(R.id.rbPre1Otro);
         rb2Si=(RadioButton) findViewById(R.id.rbPre2Si);
         rb2No=(RadioButton) findViewById(R.id.rbPre2No);
@@ -47,44 +47,25 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         rb4Si=(RadioButton) findViewById(R.id.rbPre4Si);
         rb4No=(RadioButton) findViewById(R.id.rbPre4No);
         rb5Si=(RadioButton) findViewById(R.id.rbPre5Si);
-        rb5No=(RadioButton) findViewById(R.id.rbPre5No);*/
+        rb5No=(RadioButton) findViewById(R.id.rbPre5No);
 
         btnRegTriaje =(Button) findViewById(R.id.btnTerminarTriaje);
         btnRegTriaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registrarTriaje();
+                registrarTriajePregunta01();
+                registrarTriajePregunta02();
+                registrarTriajePregunta03();
+                registrarTriajePregunta04();
+                registrarTriajePregunta05();
                 Intent i = new Intent(RegistroTriajeActivity.this,MalaRespuestaActivity.class);
                 startActivityForResult(i, 0);
             }
         });
     }
-   // public String resp1;
-    public void registrarTriaje(){
-/*
-        rgPre01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int i) {
-                int id=rgPre01.getCheckedRadioButtonId();
-                switch (id)
-                {
-                    case R.id.rbPre1Si:
-                        resp1="SI";
-                        break;
-                    case R.id.rbPre1No:
-                        resp1="NO";
-                        break;
-                   // case R.id.rbPre1Otro:
-                        //resp1="OTRO";
-                     //   break;
-                    default:
-                        resp1="OTRO";
-                        break;
 
-                }
-            }
+    public void registrarTriajePregunta01(){
 
-        });*/
         String resp="";
         if(rb1Si.isChecked()) {
             resp="SI";
@@ -92,71 +73,100 @@ public class RegistroTriajeActivity extends AppCompatActivity {
 
         else if(rb1No.isChecked()) {
             resp="NO";
-
         }
         else if(rb1Otro.isChecked()) {
             resp="OTRO";
-
         }
 
         Triaje t=new Triaje();
         t.setRespuesta(resp);
         t.setCodPregunta(1);
-        t.setCodPersona(2);//Cambiarlo el id por persona que se registre
-        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triajes/add/",t);
+        t.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",t);
         servicio.execute();
 
+    }
+    public void registrarTriajePregunta02(){
 
-       /* try{
-            String resp;
-            int codi;
-            Triaje t= new Triaje();
+        String resp="";
+        if(rb2Si.isChecked()) {
+            resp="SI";
+        }
 
-            if(rb1Si.isChecked()) {
-                resp="SI";
-                t.setRespuesta(resp);}
+        else if(rb2No.isChecked()) {
+            resp="NO";
+        }
 
-            else if(rb1No.isChecked()) {
-                resp="NO";
-                t.setRespuesta(resp);
-            }
-           else if(rb1Otro.isChecked()) {
-                resp="OTRO";
-                t.setRespuesta(resp);
-            }
-            else if(rb2Si.isChecked()) {
-                resp="SI";
-                t.setRespuesta(resp);
-            }
-            else if(rb2No.isChecked()) {
-                resp="NO";
-                t.setRespuesta(resp);
-            }
-            else if(rb3Si.isChecked()) {
-                resp="SI";
-                t.setRespuesta(resp);
-            }
-            else if(rb3No.isChecked()) {
-                resp="No";
-                t.setRespuesta(resp);
-            }
-            else if(rb4Si.isChecked()) {
-                resp="SI";
-                t.setRespuesta(resp);
-            }
-            else if(rb4No.isChecked()) {
-                resp="NO";
-                t.setRespuesta(resp);
-            }
-            else if(rb5Si.isChecked()) {
-                resp="SI";
-                t.setRespuesta(resp);
-            }
-            else if(rb5No.isChecked()) {
-                resp="NO";
-                t.setRespuesta(resp);
-            }*/
 
+        Triaje tr=new Triaje();
+        tr.setRespuesta(resp);
+        tr.setCodPregunta(2);
+        tr.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tr);
+        servicio.execute();
+
+    }
+
+    public void registrarTriajePregunta03(){
+
+        String resp="";
+        if(rb3Si.isChecked()) {
+            resp="SI";
+        }
+
+        else if(rb3No.isChecked()) {
+            resp="NO";
+        }
+
+
+        Triaje tri=new Triaje();
+        tri.setRespuesta(resp);
+        tri.setCodPregunta(3);
+        tri.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tri);
+        servicio.execute();
+
+    }
+
+    public void registrarTriajePregunta04(){
+
+        String resp="";
+        if(rb4Si.isChecked()) {
+            resp="SI";
+        }
+
+        else if(rb4No.isChecked()) {
+            resp="NO";
+        }
+
+
+        Triaje tria=new Triaje();
+        tria.setRespuesta(resp);
+        tria.setCodPregunta(4);
+        tria.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tria);
+        servicio.execute();
+
+    }
+
+    public void registrarTriajePregunta05(){
+
+        String resp="";
+        if(rb5Si.isChecked()) {
+            resp="SI";
+        }
+
+        else if(rb5No.isChecked()) {
+            resp="NO";
+        }
+
+
+        Triaje triaj=new Triaje();
+        triaj.setRespuesta(resp);
+        triaj.setCodPregunta(5);
+        triaj.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",triaj);
+        servicio.execute();
 
     }
 
