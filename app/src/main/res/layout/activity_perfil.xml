@@ -147,13 +147,13 @@
         android:layout_width="59dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/btnPerTri"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:srcCompat="@drawable/mapa2" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/btnPerTri"
         android:layout_width="59dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"

@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnIniciarTriaje"
         android:layout_width="235dp"
         android:layout_height="38dp"
         android:layout_marginTop="24dp"

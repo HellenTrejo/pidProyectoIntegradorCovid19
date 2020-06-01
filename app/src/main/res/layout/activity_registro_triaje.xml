@@ -50,10 +50,12 @@
                 android:layout_marginBottom="15dp" />
 
             <RadioGroup
+                android:id="@+id/rgPregunta01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp">
                 <RadioButton
+                    android:id="@+id/rbPre1Si"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sí"
@@ -61,6 +63,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
                 <RadioButton
+                    android:id="@+id/rbPre1No"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
@@ -69,6 +72,7 @@
                     android:layout_marginBottom="5dp" />
 
                 <RadioButton
+                    android:id="@+id/rbPre1Otro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Otro. Defina su malestar"
@@ -89,10 +93,12 @@
                 android:layout_marginBottom="15dp" />
 
             <RadioGroup
+                android:id="@+id/rgPregunta02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp">
                 <RadioButton
+                    android:id="@+id/rbPre2Si"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sí"
@@ -100,6 +106,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
                 <RadioButton
+                    android:id="@+id/rbPre2No"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
@@ -121,10 +128,12 @@
                 android:layout_marginBottom="15dp" />
 
             <RadioGroup
+                android:id="@+id/rgPregunta03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp">
                 <RadioButton
+                    android:id="@+id/rbPre3Si"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sí"
@@ -132,6 +141,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
                 <RadioButton
+                    android:id="@+id/rbPre3No"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
@@ -153,10 +163,12 @@
                 android:layout_marginBottom="15dp" />
 
             <RadioGroup
+                android:id="@+id/rgPregunta04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp">
                 <RadioButton
+                    android:id="@+id/rbPre4Si"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sí"
@@ -164,6 +176,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
                 <RadioButton
+                    android:id="@+id/rbPre4No"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
@@ -185,10 +198,12 @@
                 android:layout_marginBottom="15dp" />
 
             <RadioGroup
+                android:id="@+id/rgPregunta05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp">
                 <RadioButton
+                    android:id="@+id/rbPre5Si"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sí"
@@ -196,6 +211,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
                 <RadioButton
+                    android:id="@+id/rbPre5No"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
@@ -207,7 +223,7 @@
 
 
             <Button
-                android:id="@+id/ir_posicion"
+                android:id="@+id/btnTerminarTriaje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
