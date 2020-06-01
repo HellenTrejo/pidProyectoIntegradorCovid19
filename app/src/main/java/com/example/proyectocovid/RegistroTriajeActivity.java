@@ -18,11 +18,11 @@ import com.example.proyectocovid.entidades.Triaje;
 import com.example.proyectocovid.taskPersona.ServicioTaskSavePersona;
 import com.example.proyectocovid.taskTriaje.ServicioTaskSaveTriaje;
 
-public class RegistroTriajeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class RegistroTriajeActivity extends AppCompatActivity {
 
 
     RadioGroup rgPre01,rgPre02,rgPre03,rgPre04,rgPre05;
-  //  RadioButton rb1Si,rb1No, rb1Otro, rb2Si,rb2No,rb3Si,rb3No,rb4Si,rb4No, rb5Si,rb5No;
+    RadioButton rb1Si, rb1No, rb1Otro, rb2Si,rb2No,rb3Si,rb3No,rb4Si,rb4No, rb5Si,rb5No;
     Button btnRegTriaje;
 
     @Override
@@ -37,8 +37,8 @@ public class RegistroTriajeActivity extends AppCompatActivity implements Adapter
 
 
 
-        /*rb1Si=(RadioButton) findViewById(R.id.rbPre1Si);
-        rb1No=(RadioButton) findViewById(R.id.rbPre1No);
+        rb1Si=(RadioButton) findViewById(R.id.rbPre1Si);
+        /*rb1No=(RadioButton) findViewById(R.id.rbPre1No);
         rb1Otro=(RadioButton) findViewById(R.id.rbPre1Otro);
         rb2Si=(RadioButton) findViewById(R.id.rbPre2Si);
         rb2No=(RadioButton) findViewById(R.id.rbPre2No);
@@ -49,15 +49,20 @@ public class RegistroTriajeActivity extends AppCompatActivity implements Adapter
         rb5Si=(RadioButton) findViewById(R.id.rbPre5Si);
         rb5No=(RadioButton) findViewById(R.id.rbPre5No);*/
 
-        btnRegTriaje =(Button) findViewById(R.id.btnIniciarTriaje);
-        btnRegTriaje.setOnClickListener(this);
+        btnRegTriaje =(Button) findViewById(R.id.btnTerminarTriaje);
+        btnRegTriaje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                registrarTriaje();
+                Intent i = new Intent(RegistroTriajeActivity.this,MalaRespuestaActivity.class);
+                startActivityForResult(i, 0);
+            }
+        });
     }
-
+   // public String resp1;
     public void registrarTriaje(){
-       final Triaje t=new Triaje();
+/*
         rgPre01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-            String resp1;
             @Override
             public void onCheckedChanged(RadioGroup group, int i) {
                 int id=rgPre01.getCheckedRadioButtonId();
@@ -69,22 +74,35 @@ public class RegistroTriajeActivity extends AppCompatActivity implements Adapter
                     case R.id.rbPre1No:
                         resp1="NO";
                         break;
-                    case R.id.rbPre1Otro:
-                        resp1="OTRO";
-                        break;
+                   // case R.id.rbPre1Otro:
+                        //resp1="OTRO";
+                     //   break;
                     default:
-                        //
+                        resp1="OTRO";
                         break;
 
                 }
-                t.setRespuesta(resp1);
-                t.setCodPregunta(1);
-                t.setCodPersona(2);//Cambiarlo el id por persona que se registre
-
             }
 
+        });*/
+        String resp="";
+        if(rb1Si.isChecked()) {
+            resp="SI";
+            }
 
-        });
+        else if(rb1No.isChecked()) {
+            resp="NO";
+
+        }
+        else if(rb1Otro.isChecked()) {
+            resp="OTRO";
+
+        }
+
+        Triaje t=new Triaje();
+        t.setRespuesta(resp);
+        t.setCodPregunta(1);
+        t.setCodPersona(2);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triajes/add/",t);
         servicio.execute();
 
@@ -141,29 +159,6 @@ public class RegistroTriajeActivity extends AppCompatActivity implements Adapter
 
 
     }
-
-    @Override
-    public void onClick(View v) {
-
-        if(v==btnRegTriaje){
-            registrarTriaje();
-            Intent intent = new Intent(this, MalaRespuestaActivity.class);
-            startActivity(intent);
-        }
-
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
-
 
 
 

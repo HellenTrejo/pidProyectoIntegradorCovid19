@@ -13,13 +13,14 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
     implements View.OnClickListener, AdapterView.OnItemClickListener {
 
-    Button btnIngresar;
+    Button btnIngresar, btnARegistroP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnIngresar = (Button) findViewById(R.id.btnlogin);
+        btnARegistroP=(Button)findViewById((R.id.btnRegistrarNewP));
         btnIngresar.setOnClickListener(this);
     }
 
@@ -27,8 +28,14 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onClick(View v) {
         if(v==btnIngresar){
+            Intent intent=new Intent(this,ActivityPerfil.class);
+            startActivity(intent);
+        }
+        if(v==btnARegistroP){
+
             Intent intent=new Intent(this,RegistroPersona.class);
             startActivity(intent);
+
 
         }
     }
