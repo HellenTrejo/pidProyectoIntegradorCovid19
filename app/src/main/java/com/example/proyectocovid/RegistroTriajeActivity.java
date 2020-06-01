@@ -81,7 +81,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje t=new Triaje();
         t.setRespuesta(resp);
         t.setCodPregunta(1);
-        t.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        t.setCodPersona(11);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",t);
         servicio.execute();
 
@@ -101,7 +101,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje tr=new Triaje();
         tr.setRespuesta(resp);
         tr.setCodPregunta(2);
-        tr.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        tr.setCodPersona(11);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tr);
         servicio.execute();
 
@@ -122,7 +122,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje tri=new Triaje();
         tri.setRespuesta(resp);
         tri.setCodPregunta(3);
-        tri.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        tri.setCodPersona(11);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tri);
         servicio.execute();
 
@@ -143,7 +143,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje tria=new Triaje();
         tria.setRespuesta(resp);
         tria.setCodPregunta(4);
-        tria.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        tria.setCodPersona(11);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tria);
         servicio.execute();
 
@@ -164,7 +164,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje triaj=new Triaje();
         triaj.setRespuesta(resp);
         triaj.setCodPregunta(5);
-        triaj.setCodPersona(10);//Cambiarlo el id por persona que se registre
+        triaj.setCodPersona(11);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",triaj);
         servicio.execute();
 
