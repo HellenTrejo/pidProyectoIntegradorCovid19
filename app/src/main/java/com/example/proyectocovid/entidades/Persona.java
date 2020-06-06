@@ -9,6 +9,24 @@ public class Persona {
     private int codigoRol;
     private int codigoEst;
 
+    private Rol rol;
+    private Estado estado;
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 
     public int getIdpersona() {
         return idpersona;

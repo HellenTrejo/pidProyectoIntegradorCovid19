@@ -56,21 +56,26 @@ public class MainActivity extends AppCompatActivity {
 
     void cargarPersonas(){
         try {
-            ServicioTaskListPersona s=new ServicioTaskListPersona(this,REST);
+            String numDoc=txtDniLogin.getText().toString();
+            ServicioTaskListPersona s=new ServicioTaskListPersona(this,REST+numDoc);
             s.execute();
             String a=s.get();
             ArrayList<Persona> data= MySqlPersonaDAO.listaPersonas(a);
-            String numDoc=txtDniLogin.getText().toString();
-            REST= REST + numDoc;
+
             Persona p= new Persona();
-            if (p.getNumDoc()==numDoc){
-                Intent i2 = new Intent(MainActivity.this, ActivityPerfil.class);
-                startActivityForResult(i2, 0);
+
+            for (Persona x:data) {
+                String var= x.getNumDoc();
+                if (x.getNumDoc().equals(numDoc)){
+                    Intent i2 = new Intent(MainActivity.this, ActivityPerfil.class);
+                    startActivityForResult(i2, 0);
+                }else
+                {
+                    Toast.makeText(getApplicationContext(), "Usted no está registrado", Toast.LENGTH_LONG).show();
+                }
             }
-            else
-            {
-                Toast.makeText(getApplicationContext(), "Usted no está registrado", Toast.LENGTH_LONG).show();
-            }
+
+
 
         }
         catch (Exception e){

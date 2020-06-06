@@ -1,6 +1,8 @@
 package com.example.proyectocovid.controlador;
 
+import com.example.proyectocovid.entidades.Estado;
 import com.example.proyectocovid.entidades.Persona;
+import com.example.proyectocovid.entidades.Rol;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -22,16 +24,23 @@ public class MySqlPersonaDAO {
                 fila=(JSONObject)jsonArray.get(i);
                 //crear objeto de la clase Docente
                 Persona p=new Persona();
+                Rol r = new Rol();
+                Estado e = new Estado();
                 //setear los atributos del objeto "doc"
                 //con los valores del objeto fila
+
 
                 p.setIdpersona(fila.getInt("idPersona"));
                 p.setNumDoc(fila.getString("numDoc"));
                 p.setNumCel(fila.getString("numcel"));
-                p.setCodigoDoc(fila.getInt("idTipoDocumento"));
-                p.setCodigoNac(fila.getInt("idNacionalidad"));
+               /* r.setIdRol(fila.getInt("idRol"));
+                r.setNombreRol(fila.getString("nombreRol"));
+                p.setRol(r);
+                e.setIdestado(fila.getInt("idEstado"));
+                e.setDescripcion(fila.getString("descripcion"));
+                p.setEstado(e);
                 p.setCodigoRol(fila.getInt("idRol"));
-                p.setCodigoEst(fila.getInt("idEstado"));
+                p.setCodigoEst(fila.getInt("idEstado"));*/
                 data.add(p);
             }
         }
