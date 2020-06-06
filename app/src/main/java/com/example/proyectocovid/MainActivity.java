@@ -70,8 +70,6 @@ public class MainActivity extends AppCompatActivity {
             else
             {
                 Toast.makeText(getApplicationContext(), "Usted no está registrado", Toast.LENGTH_LONG).show();
-
-
             }
 
         }
