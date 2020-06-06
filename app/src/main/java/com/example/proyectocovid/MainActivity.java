@@ -3,38 +3,50 @@ package com.example.proyectocovid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import java.util.ArrayList;
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity
-    implements View.OnClickListener, AdapterView.OnItemClickListener {
+    EditText txtDniLogin;
+    Button btnIngresar, btnARegistroP;
+    private String numDoc;
+    private String baseUrl;
 
-    Button btnIngresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        txtDniLogin = (EditText) findViewById(R.id.et_dniLogin);
         btnIngresar = (Button) findViewById(R.id.btnlogin);
-        btnIngresar.setOnClickListener(this);
+        btnARegistroP = (Button) findViewById((R.id.btnRegistrarNewP));
+        btnIngresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
+                //Intent i2 = new Intent(MainActivity.this, ActivityPerfil.class);
+                //startActivityForResult(i2, 0);
+            }
+        });
+        btnARegistroP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, RegistroPersona.class);
+                startActivityForResult(i, 0);
+            }
+        });
+
     }
 
 
-    @Override
-    public void onClick(View v) {
-        if(v==btnIngresar){
-            Intent intent=new Intent(this,RegistroPersona.class);
-            startActivity(intent);
 
-        }
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-    }
 }
