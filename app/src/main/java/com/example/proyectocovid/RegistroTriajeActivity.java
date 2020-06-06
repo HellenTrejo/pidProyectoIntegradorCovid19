@@ -80,10 +80,7 @@ public class RegistroTriajeActivity extends AppCompatActivity implements Adapter
                 t.setRespuesta(resp1);
                 t.setCodPregunta(1);
                 t.setCodPersona(2);//Cambiarlo el id por persona que se registre
-
             }
-
-
         });
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triajes/add/",t);
         servicio.execute();
