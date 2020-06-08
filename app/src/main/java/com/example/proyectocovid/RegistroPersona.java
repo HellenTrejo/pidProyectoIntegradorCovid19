@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.proyectocovid.controlador.MySqlNacionalidadDAO;
 import com.example.proyectocovid.controlador.MySqlTipoDocumentoDAO;
@@ -103,7 +104,8 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
     public void onClick(View v) {
         if(v==btnRegistrop){
             registrarPersona();
-            Intent intent = new Intent(this, ActivityPerfil.class);
+            Intent intent = new Intent(this, MainActivity.class);
+            Toast.makeText(getApplicationContext(), "Registro exitoso!!!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }
     }

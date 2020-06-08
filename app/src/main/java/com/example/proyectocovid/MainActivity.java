@@ -64,17 +64,28 @@ public class MainActivity extends AppCompatActivity {
 
             Persona p= new Persona();
 
+            if(data.size()<=0){
+                Toast.makeText(getApplicationContext(), "Usted no está registrado", Toast.LENGTH_SHORT).show();
+            }else
+            {
             for (Persona x:data) {
                 String var= x.getNumDoc();
+                String var2=x.getNacionalidad().getNombreNacionalidad();
+                String var3=x.getNumCel();
+                int var4=x.getIdpersona();
                 if (x.getNumDoc().equals(numDoc)){
                     Intent i2 = new Intent(MainActivity.this, ActivityPerfil.class);
+                    i2.putExtra("numDoc", var);
+                    i2.putExtra("nombreNac", var2);
+                    i2.putExtra("numcel", var3);
+                    i2.putExtra("idPersona",var4);
                     startActivityForResult(i2, 0);
-                }else
-                {
-                    Toast.makeText(getApplicationContext(), "Usted no está registrado", Toast.LENGTH_LONG).show();
+                    //
+
+
                 }
             }
-
+            }
 
 
         }

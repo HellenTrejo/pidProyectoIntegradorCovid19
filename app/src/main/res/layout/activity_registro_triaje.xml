@@ -49,6 +49,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="15dp" />
 
+
             <RadioGroup
                 android:id="@+id/rgPregunta01"
                 android:layout_width="match_parent"

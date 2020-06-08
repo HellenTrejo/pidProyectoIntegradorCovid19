@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,11 +25,20 @@ public class RegistroTriajeActivity extends AppCompatActivity {
     RadioGroup rgPre01,rgPre02,rgPre03,rgPre04,rgPre05;
     RadioButton rb1Si, rb1No, rb1Otro, rb2Si,rb2No,rb3Si,rb3No,rb4Si,rb4No, rb5Si,rb5No;
     Button btnRegTriaje;
+    int conT=0;
+
+     int idPersona=0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_triaje);
+        //
+
+        idPersona=getIntent().getExtras().getInt("idPersona");
+
         rgPre01=(RadioGroup) findViewById(R.id.rgPregunta01);
         rgPre02=(RadioGroup) findViewById(R.id.rgPregunta02);
         rgPre03=(RadioGroup) findViewById(R.id.rgPregunta03);
@@ -58,17 +68,30 @@ public class RegistroTriajeActivity extends AppCompatActivity {
                 registrarTriajePregunta03();
                 registrarTriajePregunta04();
                 registrarTriajePregunta05();
-                Intent i = new Intent(RegistroTriajeActivity.this,MalaRespuestaActivity.class);
-                startActivityForResult(i, 0);
+
+                if(conT>=3){
+                    Intent i = new Intent(RegistroTriajeActivity.this,MalaRespuestaActivity.class);
+
+                    startActivityForResult(i, 0);
+                }else{
+                    Intent i2 = new Intent(RegistroTriajeActivity.this,BuenaRespuestaActivity.class);
+
+                    startActivityForResult(i2, 0);
+                }
+
+
             }
         });
     }
+
+
 
     public void registrarTriajePregunta01(){
 
         String resp="";
         if(rb1Si.isChecked()) {
             resp="SI";
+            conT++;
             }
 
         else if(rb1No.isChecked()) {
@@ -81,7 +104,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje t=new Triaje();
         t.setRespuesta(resp);
         t.setCodPregunta(1);
-        t.setCodPersona(13);//Cambiarlo el id por persona que se registre
+        t.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",t);
         servicio.execute();
 
@@ -91,6 +114,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         String resp="";
         if(rb2Si.isChecked()) {
             resp="SI";
+            conT++;
         }
 
         else if(rb2No.isChecked()) {
@@ -101,7 +125,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje tr=new Triaje();
         tr.setRespuesta(resp);
         tr.setCodPregunta(2);
-        tr.setCodPersona(13);//Cambiarlo el id por persona que se registre
+        tr.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tr);
         servicio.execute();
 
@@ -112,6 +136,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         String resp="";
         if(rb3Si.isChecked()) {
             resp="SI";
+            conT++;
         }
 
         else if(rb3No.isChecked()) {
@@ -122,7 +147,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje tri=new Triaje();
         tri.setRespuesta(resp);
         tri.setCodPregunta(3);
-        tri.setCodPersona(13);//Cambiarlo el id por persona que se registre
+        tri.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tri);
         servicio.execute();
 
@@ -133,6 +158,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         String resp="";
         if(rb4Si.isChecked()) {
             resp="SI";
+            conT++;
         }
 
         else if(rb4No.isChecked()) {
@@ -143,7 +169,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje tria=new Triaje();
         tria.setRespuesta(resp);
         tria.setCodPregunta(4);
-        tria.setCodPersona(13);//Cambiarlo el id por persona que se registre
+        tria.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tria);
         servicio.execute();
 
@@ -154,6 +180,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         String resp="";
         if(rb5Si.isChecked()) {
             resp="SI";
+            conT++;
         }
 
         else if(rb5No.isChecked()) {
@@ -164,7 +191,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         Triaje triaj=new Triaje();
         triaj.setRespuesta(resp);
         triaj.setCodPregunta(5);
-        triaj.setCodPersona(13);//Cambiarlo el id por persona que se registre
+        triaj.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
         ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",triaj);
         servicio.execute();
 

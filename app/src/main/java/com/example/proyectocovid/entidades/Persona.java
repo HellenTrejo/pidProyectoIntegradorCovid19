@@ -11,6 +11,24 @@ public class Persona {
 
     private Rol rol;
     private Estado estado;
+    private Nacionalidad nacionalidad;
+    private TipoDocumento tipoDocumento;
+
+    public TipoDocumento getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    public Nacionalidad getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(Nacionalidad nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
 
     public Rol getRol() {
         return rol;

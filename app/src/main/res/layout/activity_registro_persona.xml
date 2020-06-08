@@ -50,7 +50,10 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
                 android:textColor="#fff"
-                android:textColorHint="#ccc" />
+                android:textColorHint="#ccc"
+
+
+                />
 
             <Spinner
                 android:id="@+id/spNacionalidad"

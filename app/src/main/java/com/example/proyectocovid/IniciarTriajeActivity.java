@@ -10,7 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class IniciarTriajeActivity extends AppCompatActivity {
 
+
     Button btnIniTri;
+     int idPersona=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +20,12 @@ public class IniciarTriajeActivity extends AppCompatActivity {
 
         btnIniTri= (Button) findViewById(R.id.btnIniciarTriaje);
 
+        idPersona= getIntent().getExtras().getInt("idPersona");
         btnIniTri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(IniciarTriajeActivity.this,RegistroTriajeActivity.class);
+                i.putExtra("idPersona", idPersona);
                 startActivityForResult(i, 0);
             }
         });
