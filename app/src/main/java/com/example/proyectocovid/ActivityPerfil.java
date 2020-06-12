@@ -37,7 +37,7 @@ public class ActivityPerfil extends AppCompatActivity {
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
 
             }
