@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static String REST="http://env-4252036.j.layershift.co.uk/rest/servicios/persona/";
+    private static String REST="http://env-6360882.j.layershift.co.uk/rest/servicios/persona/";
 
     EditText txtDniLogin;
     Button btnIngresar, btnARegistroP;

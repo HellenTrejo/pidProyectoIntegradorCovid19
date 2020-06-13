@@ -48,7 +48,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
     }
     public void cargarNacionalidad(){
         try{
-            ServicioTaskListNacionalidad servicio=new ServicioTaskListNacionalidad(this,"http://env-4252036.j.layershift.co.uk/rest/servicios/nacionalidad/");
+            ServicioTaskListNacionalidad servicio=new ServicioTaskListNacionalidad(this,"http://env-6360882.j.layershift.co.uk/rest/servicios/nacionalidad/");
             servicio.execute();
             String c=servicio.get();
             ArrayList<Nacionalidad> data= MySqlNacionalidadDAO.listaAllNacionalidad(c);
@@ -62,7 +62,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
 
     public void cargarTipoDoc(){
         try{
-            ServicioTaskListTipoDoc servicio=new ServicioTaskListTipoDoc(this,"http://env-4252036.j.layershift.co.uk/rest/servicios/tipodoc/");
+            ServicioTaskListTipoDoc servicio=new ServicioTaskListTipoDoc(this,"http://env-6360882.j.layershift.co.uk/rest/servicios/tipodoc/");
             servicio.execute();
             String c=servicio.get();
             ArrayList<TipoDocumento> data= MySqlTipoDocumentoDAO.listaAllTipoDoc(c);
@@ -90,7 +90,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
             per.setCodigoNac(nac.getIdnacionalidad());
             per.setCodigoRol(2);
             per.setCodigoEst(4);
-            ServicioTaskSavePersona servicio= new ServicioTaskSavePersona(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/persona/add/",per);
+            ServicioTaskSavePersona servicio= new ServicioTaskSavePersona(this, "http://env-6360882.j.layershift.co.uk/rest/servicios/persona/add/",per);
             servicio.execute();
 
         }

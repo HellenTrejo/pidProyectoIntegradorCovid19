@@ -85,7 +85,7 @@ public class ActivityPerfil extends AppCompatActivity {
             //break;
             case R.id.menu_cifras:
                 //Toast.makeText(this, "Cerró sesión",Toast.LENGTH_SHORT).show();
-                Intent myc = new Intent(ActivityPerfil.this,BuenaRespuestaActivity.class);//Cambiar
+                Intent myc = new Intent(ActivityPerfil.this,CifrasCovid.class);//Cambiar
                 startActivityForResult(myc,0);
                 return true;
             //break;

@@ -105,7 +105,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         t.setRespuesta(resp);
         t.setCodPregunta(1);
         t.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
-        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",t);
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-6360882.j.layershift.co.uk/rest/servicios/triaje/add/",t);
         servicio.execute();
 
     }
@@ -126,7 +126,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         tr.setRespuesta(resp);
         tr.setCodPregunta(2);
         tr.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
-        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tr);
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-6360882.j.layershift.co.uk/rest/servicios/triaje/add/",tr);
         servicio.execute();
 
     }
@@ -148,7 +148,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         tri.setRespuesta(resp);
         tri.setCodPregunta(3);
         tri.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
-        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tri);
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-6360882.j.layershift.co.uk/rest/servicios/triaje/add/",tri);
         servicio.execute();
 
     }
@@ -170,7 +170,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         tria.setRespuesta(resp);
         tria.setCodPregunta(4);
         tria.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
-        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",tria);
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-6360882.j.layershift.co.uk/rest/servicios/triaje/add/",tria);
         servicio.execute();
 
     }
@@ -192,7 +192,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         triaj.setRespuesta(resp);
         triaj.setCodPregunta(5);
         triaj.setCodPersona(idPersona);//Cambiarlo el id por persona que se registre
-        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-4252036.j.layershift.co.uk/rest/servicios/triaje/add/",triaj);
+        ServicioTaskSaveTriaje servicio= new ServicioTaskSaveTriaje(this, "http://env-6360882.j.layershift.co.uk/rest/servicios/triaje/add/",triaj);
         servicio.execute();
 
     }
