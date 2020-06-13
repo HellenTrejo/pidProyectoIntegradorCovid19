@@ -133,6 +133,7 @@ public class CifrasCovid extends AppCompatActivity {
                         edFallecido.setText(""+var4);
                         edNuevo.setText(""+var);
 
+                        
 
 
                     }
