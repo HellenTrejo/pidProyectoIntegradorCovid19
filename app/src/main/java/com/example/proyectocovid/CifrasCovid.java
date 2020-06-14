@@ -116,7 +116,7 @@ public class CifrasCovid extends AppCompatActivity {
             Cifras c= new Cifras();
 
             if(data.size()<=0){
-                Toast.makeText(getApplicationContext(), "Usted no está registrado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Cifras aún no actualiadas", Toast.LENGTH_SHORT).show();
             }else
             {
                 for (Cifras x:data) {
@@ -133,7 +133,7 @@ public class CifrasCovid extends AppCompatActivity {
                         edFallecido.setText(""+var4);
                         edNuevo.setText(""+var);
 
-                        
+
 
 
                     }
