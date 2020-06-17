@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
     EditText edtNumCel, edtNumDoc;
     Spinner spNacion, spTipoDoc;
     Button btnRegistrop;
+    CheckBox chAceptar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
         edtNumDoc=(EditText) findViewById(R.id.txtNumeroDoc);
         spNacion =(Spinner) findViewById(R.id.spNacionalidad);
         spTipoDoc=(Spinner) findViewById(R.id.spTipoDocumento);
+        chAceptar=(CheckBox) findViewById(R.id.checkAceptar);
         btnRegistrop=(Button) findViewById(R.id.btnRegPersona);
         btnRegistrop.setOnClickListener(this);
 
@@ -103,10 +106,11 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
     @Override
     public void onClick(View v) {
         if(v==btnRegistrop){
-            registrarPersona();
+            validarRegistroPersona();
+           /* registrarPersona();
             Intent intent = new Intent(this, MainActivity.class);
             Toast.makeText(getApplicationContext(), "Registro exitoso!!!", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+            startActivity(intent);*/
         }
     }
 
@@ -119,6 +123,54 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    void validarRegistroPersona(){
+        String cel = edtNumCel.getText().toString();
+        String doc = edtNumDoc.getText().toString();
+        String tipoDoc =spTipoDoc.getSelectedItem().toString();
+
+        if(cel.equals("")||doc.equals("")){
+            Toast.makeText(getApplicationContext(), "Ingrese los datos", Toast.LENGTH_SHORT).show();
+        }
+        else if(cel.length()>9||cel.length()<9){
+            Toast.makeText(getApplicationContext(), "El numero de celular es de 9 digitos", Toast.LENGTH_SHORT).show();
+        }
+        else if(tipoDoc.equals("DNI")) {
+            if (doc.length() < 8 || doc.length() > 8) {
+                Toast.makeText(getApplicationContext(), "DNI debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
+            }else if(chAceptar.isChecked()==false){
+                Toast.makeText(getApplicationContext(), "Por favor, aceptar Terminos y Condiciones", Toast.LENGTH_SHORT).show();
+            }else {
+                //RESULTADO
+                //Toast.makeText(getApplicationContext(), "exitoso", Toast.LENGTH_SHORT).show();
+                resultadoExitoso();
+            }
+
+        }
+        else if (tipoDoc.equals("CARNET EXTRANJERIA")) {
+            if (doc.length() < 11 || doc.length() > 11) {
+                    Toast.makeText(getApplicationContext(), "Carnet de extranjeria es de 11 digitos", Toast.LENGTH_SHORT).show();
+            }else if(chAceptar.isChecked()==false){
+                Toast.makeText(getApplicationContext(), "Por favor, aceptar Terminos y Condiciones", Toast.LENGTH_SHORT).show();
+            }else {
+                //RESULTADO
+                //Toast.makeText(getApplicationContext(), "exitoso", Toast.LENGTH_SHORT).show();
+                resultadoExitoso();
+            }
+        }
+
+    }
+
+
+    void resultadoExitoso(){
+        registrarPersona();
+        Intent intent = new Intent(this, MainActivity.class);
+        Toast.makeText(getApplicationContext(), "Registro exitoso!!!", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+    }
+
+
+
 }
 
 

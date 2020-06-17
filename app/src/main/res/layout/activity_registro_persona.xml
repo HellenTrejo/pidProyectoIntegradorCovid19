@@ -114,7 +114,7 @@
 
 
             <CheckBox
-                android:id="@+id/checkArquero"
+                android:id="@+id/checkAceptar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
