@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                cargarPersonas();
+                validarPersona();
+                //cargarPersonas();
 
                 //Intent i2 = new Intent(MainActivity.this, ActivityPerfil.class);
                 //startActivityForResult(i2, 0);
@@ -93,6 +93,18 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    void validarPersona(){
+        if(txtDniLogin.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), "Ingrese documento de identidad", Toast.LENGTH_SHORT).show();
+        }else if(txtDniLogin.getText().toString().length()<8||txtDniLogin.getText().toString().length()>8){
+            Toast.makeText(getApplicationContext(), "Documento debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            cargarPersonas();
+        }
     }
 
 
