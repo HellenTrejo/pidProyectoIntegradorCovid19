@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.proyectocovid.entidades.Nacionalidad;
 import com.example.proyectocovid.entidades.Persona;
@@ -33,11 +34,22 @@ public class RegistroTriajeActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(final Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_triaje);
         //
-
+//
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        //
         idPersona=getIntent().getExtras().getInt("idPersona");
 
         rgPre01=(RadioGroup) findViewById(R.id.rgPregunta01);
@@ -221,7 +233,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         }
         else {
             //RESULTADO
-           // Toast.makeText(getApplicationContext(), "Exitoso", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Exitoso", Toast.LENGTH_SHORT).show();
             registrarTriajePregunta01();
             registrarTriajePregunta02();
             registrarTriajePregunta03();
