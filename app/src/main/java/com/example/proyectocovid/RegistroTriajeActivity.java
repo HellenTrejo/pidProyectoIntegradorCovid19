@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -63,6 +64,8 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         btnRegTriaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                validandoRegistroTriaje();
+               /*
                 registrarTriajePregunta01();
                 registrarTriajePregunta02();
                 registrarTriajePregunta03();
@@ -78,7 +81,7 @@ public class RegistroTriajeActivity extends AppCompatActivity {
 
                     startActivityForResult(i2, 0);
                 }
-
+                */
 
             }
         });
@@ -198,6 +201,46 @@ public class RegistroTriajeActivity extends AppCompatActivity {
     }
 
 
+
+    void validandoRegistroTriaje(){
+        if (rgPre01.getCheckedRadioButtonId() == -1)
+        {
+            Toast.makeText(getApplicationContext(), "Por favor, responda la pregunta 1", Toast.LENGTH_SHORT).show();
+        }
+        else if(rgPre02.getCheckedRadioButtonId() == -1){
+            Toast.makeText(getApplicationContext(), "Por favor, responda la pregunta 2", Toast.LENGTH_SHORT).show();
+        }
+        else if(rgPre03.getCheckedRadioButtonId() == -1){
+            Toast.makeText(getApplicationContext(), "Por favor, responda la pregunta 3", Toast.LENGTH_SHORT).show();
+        }
+        else if(rgPre04.getCheckedRadioButtonId() == -1){
+            Toast.makeText(getApplicationContext(), "Por favor, responda la pregunta 4", Toast.LENGTH_SHORT).show();
+        }
+        else if(rgPre05.getCheckedRadioButtonId() == -1){
+            Toast.makeText(getApplicationContext(), "Por favor, responda la pregunta 5", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            //RESULTADO
+           // Toast.makeText(getApplicationContext(), "Exitoso", Toast.LENGTH_SHORT).show();
+            registrarTriajePregunta01();
+            registrarTriajePregunta02();
+            registrarTriajePregunta03();
+            registrarTriajePregunta04();
+            registrarTriajePregunta05();
+
+            if(conT>=3){
+                Intent i = new Intent(RegistroTriajeActivity.this,MalaRespuestaActivity.class);
+
+                startActivityForResult(i, 0);
+            }else{
+                Intent i2 = new Intent(RegistroTriajeActivity.this,BuenaRespuestaActivity.class);
+
+                startActivityForResult(i2, 0);
+            }
+        }
+
+
+    }
 
 
 }

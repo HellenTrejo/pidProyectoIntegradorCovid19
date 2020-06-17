@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Tiene sensación de falta de aire de inicio brusco?"
+                android:text="1. ¿Tiene sensación de falta de aire de inicio brusco?"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
@@ -76,7 +76,7 @@
                     android:id="@+id/rbPre1Otro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Otro. Defina su malestar"
+                    android:text="Otro"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
@@ -86,7 +86,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿En estos últimos días ha presentado fiebre? "
+                android:text="2. ¿En estos últimos días ha presentado fiebre? "
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
@@ -121,7 +121,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿En estos últimos días ha presentado tos seca y persistente?"
+                android:text="3. ¿En estos últimos días ha presentado tos seca y persistente?"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
@@ -156,7 +156,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿En estos últimos días ha tenido contacto estrecho con algún paciente positivo confirmado?"
+                android:text="4. ¿En estos últimos días ha tenido contacto estrecho con algún paciente positivo confirmado?"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
@@ -191,7 +191,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿En estos últimos días ha presentado sintomatología gastrointestinal?"
+                android:text="5. ¿En estos últimos días ha presentado sintomatología gastrointestinal?"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
