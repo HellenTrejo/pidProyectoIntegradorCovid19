@@ -20,9 +20,11 @@ import android.widget.Toast;
 public class ActivityPerfil extends AppCompatActivity {
 
   ImageView btnTriajePerfil;
+  ImageView imgNoSintomas, imgConSintomas;
   TextView txtNumDocPerfil , txtNumCelPerfil, txtNacionPerfil;
 
     int idPersona= 0;
+    int idEstado=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,8 @@ public class ActivityPerfil extends AppCompatActivity {
 
 
 
-
+        imgNoSintomas=(ImageView)findViewById(R.id.imgNoSospechoso);
+        imgConSintomas=(ImageView) findViewById(R.id.imgSospechoso);
 
         txtNumDocPerfil=(TextView)findViewById(R.id.tvNumDocPerfil);
         txtNacionPerfil=(TextView)findViewById(R.id.txNacionPerfil);
@@ -46,7 +49,8 @@ public class ActivityPerfil extends AppCompatActivity {
         txtNacionPerfil.setText(""+nacion);
 
 
-
+        idEstado=getIntent().getExtras().getInt("idEstado");
+        cambiaEstadoPerfil();
         btnTriajePerfil= (ImageView) findViewById(R.id.btnPerTri);
 
         idPersona= getIntent().getExtras().getInt("idPersona");
@@ -92,6 +96,20 @@ public class ActivityPerfil extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
         //return true;
+    }
+
+
+    void cambiaEstadoPerfil(){
+        if(idEstado==3){
+            imgNoSintomas.setImageResource(R.drawable.circulogris);
+            imgConSintomas.setImageResource(R.drawable.circulorojo);
+        }else if(idEstado==4){
+            imgNoSintomas.setImageResource(R.drawable.circuloverde);
+            imgConSintomas.setImageResource(R.drawable.circulogris);
+        }else if(idEstado==2){
+            imgNoSintomas.setImageResource(R.drawable.circulogris);
+            imgConSintomas.setImageResource(R.drawable.circulogris);
+        }
     }
 
 

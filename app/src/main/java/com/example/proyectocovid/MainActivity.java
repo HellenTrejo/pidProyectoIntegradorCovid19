@@ -73,12 +73,16 @@ public class MainActivity extends AppCompatActivity {
                 String var2=x.getNacionalidad().getNombreNacionalidad();
                 String var3=x.getNumCel();
                 int var4=x.getIdpersona();
+                int var5=x.getEstado().getIdestado();
+
+
                 if (x.getNumDoc().equals(numDoc)){
                     Intent i2 = new Intent(MainActivity.this, ActivityPerfil.class);
                     i2.putExtra("numDoc", var);
                     i2.putExtra("nombreNac", var2);
                     i2.putExtra("numcel", var3);
                     i2.putExtra("idPersona",var4);
+                    i2.putExtra("idEstado",var5);
                     startActivityForResult(i2, 0);
                     //
 

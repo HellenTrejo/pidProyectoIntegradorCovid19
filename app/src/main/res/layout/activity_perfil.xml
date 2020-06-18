@@ -24,7 +24,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgNoSospechoso"
         android:layout_width="52dp"
         android:layout_height="63dp"
         android:layout_marginStart="44dp"
@@ -34,13 +34,13 @@
         app:srcCompat="@drawable/circuloverde" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imgSospechoso"
         android:layout_width="52dp"
         android:layout_height="63dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imgNoSospechoso"
         app:srcCompat="@drawable/circulogris" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_marginTop="76dp"
         android:text="Usted no presenta sintomas"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imgNoSospechoso"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_sup" />
 
     <TextView
@@ -62,7 +62,7 @@
         android:layout_marginTop="76dp"
         android:text="Usted es un posible caso"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imgSospechoso"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
@@ -73,7 +73,7 @@
         android:layout_marginTop="76dp"
         android:text="NÚMERO DE CELULAR"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imgSospechoso" />
 
     <TextView
         android:id="@+id/tvNumCelPerfil"

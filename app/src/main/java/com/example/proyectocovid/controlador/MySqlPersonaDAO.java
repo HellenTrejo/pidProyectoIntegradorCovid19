@@ -22,6 +22,8 @@ public class MySqlPersonaDAO {
             //convertir el valor de json en "json True"
             JSONArray jsonArray=new JSONArray(json);
             String json2=null;
+            //
+            String json3=null;
 
             //objeto de la clase JSONObject
             JSONObject fila;
@@ -58,6 +60,15 @@ public class MySqlPersonaDAO {
                 n.setNombreNacionalidad(fila2.getString("nombreNacionalidad"));
 
                 p.setNacionalidad(n);
+
+                json3=fila.getString("estado");
+                JSONArray jsonArray3=new JSONArray("["+json3+"]");
+                JSONObject fila3;
+                fila3=(JSONObject)jsonArray3.get(0);
+                e.setIdestado(fila3.getInt("idEstado"));
+                e.setDescripcion(fila3.getString("descripcion"));
+
+                p.setEstado(e);
                 /*
                r.setIdRol(fila.getInt("idRol"));
                 r.setNombreRol(fila.getString("nombreRol"));
