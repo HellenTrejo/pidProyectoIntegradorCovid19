@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class ActivityPerfil extends AppCompatActivity {
 
-  ImageView btnTriajePerfil;
+  ImageView btnTriajePerfil, btnMapaPerfil, btnCifrasPerfil;
   ImageView imgNoSintomas, imgConSintomas;
   TextView txtNumDocPerfil , txtNumCelPerfil, txtNacionPerfil;
 
@@ -52,7 +52,9 @@ public class ActivityPerfil extends AppCompatActivity {
         idEstado=getIntent().getExtras().getInt("idEstado");
         cambiaEstadoPerfil();
         btnTriajePerfil= (ImageView) findViewById(R.id.btnPerTri);
+        btnMapaPerfil=(ImageView) findViewById(R.id.btnPerMap);
 
+        btnCifrasPerfil =(ImageView)findViewById(R.id.btnPerCif) ;
         idPersona= getIntent().getExtras().getInt("idPersona");
 
         btnTriajePerfil.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +63,20 @@ public class ActivityPerfil extends AppCompatActivity {
                 Intent i = new Intent(ActivityPerfil.this,IniciarTriajeActivity.class);
                 i.putExtra("idPersona", idPersona);
                 startActivityForResult(i, 0);
+            }
+        });
+        btnMapaPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent m = new Intent(ActivityPerfil.this,MapsActivity.class);
+                startActivityForResult(m, 0);
+            }
+        });
+        btnCifrasPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent c = new Intent(ActivityPerfil.this,CifrasCovid.class);
+                startActivityForResult(c, 0);
             }
         });
 
@@ -81,6 +97,9 @@ public class ActivityPerfil extends AppCompatActivity {
                 startActivityForResult(myIntent,0);
                 return true;
             //break;
+
+            /*
+
             case R.id.menu_perfil:
                 //Toast.makeText(this, "Cerró sesión",Toast.LENGTH_SHORT).show();
                 //Intent myp = new Intent(ActivityPerfil.this,ActivityPerfil.class);
@@ -93,6 +112,8 @@ public class ActivityPerfil extends AppCompatActivity {
                 startActivityForResult(myc,0);
                 return true;
             //break;
+
+             */
         }
         return super.onOptionsItemSelected(item);
         //return true;

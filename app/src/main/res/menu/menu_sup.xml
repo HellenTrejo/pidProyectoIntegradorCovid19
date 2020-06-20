@@ -8,6 +8,7 @@
         android:icon="@drawable/salir"
         app:showAsAction="always"
         />
+    <!--
     <item android:id="@+id/menu_perfil"
         android:title="Mi perfil"
         app:showAsAction="never"
@@ -16,5 +17,6 @@
         android:title="Cifras en el Perú"
         app:showAsAction="never"
         />
+        -->
 
 </menu>

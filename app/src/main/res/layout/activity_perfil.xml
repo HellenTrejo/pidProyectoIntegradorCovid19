@@ -126,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/btnPerMap"
         android:layout_width="59dp"
         android:layout_height="56dp"
         android:layout_marginStart="60dp"
@@ -136,14 +136,14 @@
         app:srcCompat="@drawable/mapa1" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/btnPerCif"
         android:layout_width="59dp"
         android:layout_height="56dp"
         android:layout_marginTop="102dp"
         app:layout_constraintEnd_toStartOf="@+id/btnPerTri"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/btnPerMap"
         app:layout_constraintTop_toBottomOf="@+id/tvNumDocPerfil"
-        app:srcCompat="@drawable/mapa2" />
+        app:srcCompat="@drawable/cifra" />
 
     <ImageView
         android:id="@+id/btnPerTri"

@@ -19,7 +19,7 @@ public class MalaRespuestaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Intent i = new Intent(MalaRespuestaActivity.this,ActivityPerfil.class);
-
+                finish();
                 //startActivityForResult(i, 0);
             }
         });

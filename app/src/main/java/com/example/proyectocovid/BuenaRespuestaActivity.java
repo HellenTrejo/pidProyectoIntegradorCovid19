@@ -21,9 +21,13 @@ public class BuenaRespuestaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Intent i = new Intent(BuenaRespuestaActivity.this,ActivityPerfil.class);
 
+                finish();
+                //finishAffinity();
                 //startActivityForResult(i, 0);
 
             }
         });
     }
+
+
 }

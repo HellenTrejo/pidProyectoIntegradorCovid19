@@ -135,6 +135,32 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
         else if(cel.length()>9||cel.length()<9){
             Toast.makeText(getApplicationContext(), "El numero de celular es de 9 digitos", Toast.LENGTH_SHORT).show();
         }
+        else if (doc.length() < 8 || doc.length() > 8) {
+            Toast.makeText(getApplicationContext(), "Documento debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
+        }else if(chAceptar.isChecked()==false){
+            Toast.makeText(getApplicationContext(), "Por favor, aceptar Terminos y Condiciones", Toast.LENGTH_SHORT).show();
+        }else {
+                //RESULTADO
+                //Toast.makeText(getApplicationContext(), "exitoso", Toast.LENGTH_SHORT).show();
+            resultadoExitoso();
+        }
+
+
+
+
+    }
+
+    void validarRegistroPersonaMalIntento(){
+        String cel = edtNumCel.getText().toString();
+        String doc = edtNumDoc.getText().toString();
+        String tipoDoc =spTipoDoc.getSelectedItem().toString();
+
+        if(cel.equals("")||doc.equals("")){
+            Toast.makeText(getApplicationContext(), "Ingrese los datos", Toast.LENGTH_SHORT).show();
+        }
+        else if(cel.length()>9||cel.length()<9){
+            Toast.makeText(getApplicationContext(), "El numero de celular es de 9 digitos", Toast.LENGTH_SHORT).show();
+        }
         else if(tipoDoc.equals("DNI")) {
             if (doc.length() < 8 || doc.length() > 8) {
                 Toast.makeText(getApplicationContext(), "DNI debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
@@ -149,7 +175,7 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
         }
         else if (tipoDoc.equals("CARNET EXTRANJERIA")) {
             if (doc.length() < 11 || doc.length() > 11) {
-                    Toast.makeText(getApplicationContext(), "Carnet de extranjeria es de 11 digitos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Carnet de extranjeria es de 11 digitos", Toast.LENGTH_SHORT).show();
             }else if(chAceptar.isChecked()==false){
                 Toast.makeText(getApplicationContext(), "Por favor, aceptar Terminos y Condiciones", Toast.LENGTH_SHORT).show();
             }else {
@@ -160,7 +186,6 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
         }
 
     }
-
 
     void resultadoExitoso(){
         registrarPersona();
