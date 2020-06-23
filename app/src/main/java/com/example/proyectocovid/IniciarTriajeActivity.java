@@ -24,7 +24,7 @@ public class IniciarTriajeActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        getSupportActionBar().setIcon(R.drawable.icon);
         //
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

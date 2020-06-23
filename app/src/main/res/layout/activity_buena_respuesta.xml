@@ -34,6 +34,7 @@
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:orientation="vertical"
+        android:background="#d8000000"
 
         >
 
@@ -42,7 +43,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="#d8000000"
+
             >
 
         <TextView
@@ -65,10 +66,12 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:padding="10dp"
             android:text="Al no haber presentado ni uno de los sintomas o solo uno, y no ha pasado las zonas de alto riesgo de transmision, la sospecha de que haya contraido el virus es minima."
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="#ffff"
@@ -78,7 +81,7 @@
 
             <ImageView
                 android:layout_width="245dp"
-                android:layout_height="242dp"
+                android:layout_height="222dp"
                 android:layout_marginBottom="10dp"
                 android:padding="10dp"
                 android:src="@drawable/stayhome" />
@@ -86,10 +89,10 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
             android:padding="10dp"
             android:text="Tome en cuenta que puede realizar el triaje nuevamente en caso que algunos de los sistomas aparezca."
-            android:textSize="24sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="#ffff"
