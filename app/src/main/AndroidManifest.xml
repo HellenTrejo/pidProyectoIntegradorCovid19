@@ -57,7 +57,9 @@
         <activity android:name=".ActivityPerfil" />
         <activity android:name=".RegistroPersona" />
 
-
+        <meta-data
+            android:name="com.google.Android.geo.API_KEY"
+            android:value="AIzaSyA-7HUYFjoA5zKhbz1XVDRm82b1GRWA_fw" />
 
     </application>
 

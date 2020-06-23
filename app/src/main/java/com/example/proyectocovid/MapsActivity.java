@@ -164,6 +164,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(miUbica,13));
                 //mMap.moveCamera(CameraUpdateFactory.newLatLng(miUbica));
                 //mMap.getUiSettings();
+                mMap.getUiSettings().setZoomControlsEnabled(true);
 
 
             }
