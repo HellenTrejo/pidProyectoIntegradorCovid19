@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class BuenaRespuestaActivity extends AppCompatActivity {
 //probando
@@ -16,6 +17,12 @@ public class BuenaRespuestaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buena_respuesta);
         btnFinalizaBuena=(Button) findViewById(R.id.btnFinBuenaResp);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ////poner icono
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         btnFinalizaBuena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

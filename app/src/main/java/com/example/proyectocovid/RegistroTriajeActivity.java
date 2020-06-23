@@ -37,11 +37,17 @@ public class RegistroTriajeActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_triaje);
+
+
+
+
         //
 //
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //
+       getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         //
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

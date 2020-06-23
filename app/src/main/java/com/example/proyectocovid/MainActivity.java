@@ -1,6 +1,7 @@
 package com.example.proyectocovid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -30,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ////poner icono
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+
+
+
 
         txtDniLogin = (EditText) findViewById(R.id.et_dniLogin);
         btnIngresar = (Button) findViewById(R.id.btnlogin);
@@ -51,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(i, 0);
             }
         });
+
+
 
     }
 

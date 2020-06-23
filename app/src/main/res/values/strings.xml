@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProyectoCovid</string>
+    <string name="app_name">Todos Comprometidos</string>
 
     <string name="btnIngresar">Ingresar</string>
     <string-array name="opciones_persona">

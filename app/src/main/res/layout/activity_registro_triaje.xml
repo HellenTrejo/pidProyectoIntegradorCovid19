@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,20 +18,34 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="50dp"
+        />
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+
+        >
+
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#d8000000"
+            android:layout_marginTop="0dp"
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -40,29 +55,39 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="En ausencia de cualquier otra patología que justifique este síntoma."
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"/>
 
 
             <RadioGroup
                 android:id="@+id/rgPregunta01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="30dp"
+                android:textColor="#fff"
+
+                >
+
                 <RadioButton
                     android:id="@+id/rbPre1Si"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sí"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:buttonTint="#e75748"
+                    android:text="Sí"
+                    android:textColor="#fff"
+                    />
                 <RadioButton
                     android:id="@+id/rbPre1No"
                     android:layout_width="match_parent"
@@ -70,7 +95,9 @@
                     android:text="No"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:buttonTint="#e75748"
+                    android:textColor="#fff"/>
 
                 <RadioButton
                     android:id="@+id/rbPre1Otro"
@@ -79,7 +106,10 @@
                     android:text="Otro"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"
+                    />
             </RadioGroup>
 
 
@@ -91,13 +121,17 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"
+                android:buttonTint="#e75748"
+                />
 
             <RadioGroup
                 android:id="@+id/rgPregunta02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp">
+                android:layout_marginBottom="25dp"
+                android:textColor="#fff">
                 <RadioButton
                     android:id="@+id/rbPre2Si"
                     android:layout_width="match_parent"
@@ -105,7 +139,10 @@
                     android:text="Sí"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"
+                    />
                 <RadioButton
                     android:id="@+id/rbPre2No"
                     android:layout_width="match_parent"
@@ -113,7 +150,10 @@
                     android:text="No"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"
+                    />
 
             </RadioGroup>
 
@@ -126,13 +166,16 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"
+                />
 
             <RadioGroup
                 android:id="@+id/rgPregunta03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp">
+                android:layout_marginBottom="25dp"
+                android:textColor="#fff">
                 <RadioButton
                     android:id="@+id/rbPre3Si"
                     android:layout_width="match_parent"
@@ -140,7 +183,10 @@
                     android:text="Sí"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"
+                    />
                 <RadioButton
                     android:id="@+id/rbPre3No"
                     android:layout_width="match_parent"
@@ -148,7 +194,10 @@
                     android:text="No"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"
+                    />
 
             </RadioGroup>
 
@@ -161,7 +210,8 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"/>
 
             <RadioGroup
                 android:id="@+id/rgPregunta04"
@@ -175,7 +225,9 @@
                     android:text="Sí"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"/>
                 <RadioButton
                     android:id="@+id/rbPre4No"
                     android:layout_width="match_parent"
@@ -183,7 +235,9 @@
                     android:text="No"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"/>
 
             </RadioGroup>
 
@@ -196,7 +250,8 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"/>
 
             <RadioGroup
                 android:id="@+id/rgPregunta05"
@@ -210,7 +265,9 @@
                     android:text="Sí"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"/>
                 <RadioButton
                     android:id="@+id/rbPre5No"
                     android:layout_width="match_parent"
@@ -218,7 +275,9 @@
                     android:text="No"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:buttonTint="#e75748"/>
 
             </RadioGroup>
 
