@@ -24,29 +24,25 @@
         android:id="@+id/textUpdate"
         android:layout_width="165dp"
         android:layout_height="32dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="56dp"
         android:text="Actualizadas al:"
-        android:textAlignment="center"
         android:textColor="#ffff"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textUpdate2"
-        android:layout_width="159dp"
-        android:layout_height="30dp"
+        android:layout_width="165dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="28dp"
         android:text="Departamento:"
-        android:textAlignment="center"
         android:textColor="#ffff"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerDepart"
-        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textUpdate" />
 
@@ -55,10 +51,10 @@
         android:layout_width="168dp"
         android:layout_height="33dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/btn_redondeo_white"
         android:hint="Fecha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textUpdate"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Spinner

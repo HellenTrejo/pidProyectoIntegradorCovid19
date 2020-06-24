@@ -240,13 +240,14 @@ public class RegistroTriajeActivity extends AppCompatActivity {
         else {
             //RESULTADO
             //Toast.makeText(getApplicationContext(), "Exitoso", Toast.LENGTH_SHORT).show();
-            //registrarTriajePregunta01();
-            //registrarTriajePregunta02();
-            //registrarTriajePregunta03();
-            //registrarTriajePregunta04();
-            //registrarTriajePregunta05();
+            registrarTriajePregunta01();
+            registrarTriajePregunta02();
+            registrarTriajePregunta03();
+            registrarTriajePregunta04();
+            registrarTriajePregunta05();
 
             if(conT>=3){
+
                 Intent i = new Intent(RegistroTriajeActivity.this,MalaRespuestaActivity.class);
 
                 startActivityForResult(i, 0);
