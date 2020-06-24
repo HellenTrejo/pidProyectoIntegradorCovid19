@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityPerfil">
+    tools:context=".ActivityPerfil"
+    android:background="#d8000000"
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_sup"
@@ -50,7 +52,10 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="76dp"
         android:text="Usted no presenta sintomas"
-        android:textSize="16sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#ffff"
         app:layout_constraintStart_toEndOf="@+id/imgNoSospechoso"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_sup" />
 
@@ -61,29 +66,55 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="76dp"
         android:text="Usted es un posible caso"
-        android:textSize="16sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#ffff"
         app:layout_constraintStart_toEndOf="@+id/imgSospechoso"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="76dp"
-        android:text="NÚMERO DE CELULAR"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgSospechoso" />
 
     <TextView
         android:id="@+id/tvNumCelPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="#########"
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:text="NÚMERO DE CELULAR"
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSospechoso" />
+
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:padding="10dp"
+        android:src="@drawable/usuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView11"
@@ -92,6 +123,10 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:text="NACIONALIDAD"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#ffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNumCelPerfil" />
 
@@ -102,6 +137,10 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="12dp"
         android:text="#######"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#ffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -111,7 +150,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
-        android:text="NUMERO DE DOCUMENTO"
+        android:text="NÚMERO DE DOCUMENTO"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#ffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txNacionPerfil" />
 
@@ -122,6 +165,10 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="12dp"
         android:text="########"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#ffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 

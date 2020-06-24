@@ -23,7 +23,7 @@ public class IniciarTriajeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //
+        //agregar ícono
         getSupportActionBar().setIcon(R.drawable.icon);
         //
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

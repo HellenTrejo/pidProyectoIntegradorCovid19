@@ -28,11 +28,13 @@ public class ActivityPerfil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_perfil);
         Toolbar toolbar = findViewById(R.id.toolbar_sup);
         setSupportActionBar(toolbar);
 
-
+        ////poner icono
+        getSupportActionBar().setIcon(R.drawable.icon);
 
         imgNoSintomas=(ImageView)findViewById(R.id.imgNoSospechoso);
         imgConSintomas=(ImageView) findViewById(R.id.imgSospechoso);

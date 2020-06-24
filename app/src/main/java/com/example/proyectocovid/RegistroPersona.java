@@ -1,6 +1,7 @@
 package com.example.proyectocovid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,6 +36,11 @@ public class RegistroPersona extends AppCompatActivity implements AdapterView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_persona);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ////poner icono
+        getSupportActionBar().setIcon(R.drawable.icon);
 
 
         edtNumCel =(EditText) findViewById(R.id.txtCelular);

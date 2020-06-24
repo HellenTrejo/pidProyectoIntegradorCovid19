@@ -49,6 +49,10 @@ public class CifrasCovid extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //
+        ////poner icono
+        getSupportActionBar().setIcon(R.drawable.icon);
+
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

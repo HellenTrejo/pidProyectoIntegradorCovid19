@@ -20,9 +20,11 @@ public class BuenaRespuestaActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ////poner icono
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        getSupportActionBar().setIcon(R.drawable.icon);
+
+
         btnFinalizaBuena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
